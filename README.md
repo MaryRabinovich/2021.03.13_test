@@ -1,25 +1,17 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
-
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
-
-#Запуск Docker
+Запуск Docker
 ```
 docker-compose build
 docker-compose up
 http://localhost:8000
 ```
-#Запуск тестов
+Запуск тестов
 ```
 ./vendor/bin/phpunit
 ```
 
-#Задание
+Задание
 Сделать модуль подбора лекарств по задаваемым действующим веществам.
+
 Часть администрирования:
 1. CRUD добавления возможных вариантов действующих веществ (например "ромашка", "спирт", "меланин" и пр.).
 2. CRUD создания лекарств из этих веществ (как комбинация веществ).
