@@ -22,6 +22,8 @@ class Drug3Test extends TestCase
      */
     public function testSearch(\Closure $function, array $search, array $result)
     {
+        // $this->assertTrue(true);
+        
         call_user_func($function);
 
         $search = http_build_query($search);
@@ -47,12 +49,15 @@ class Drug3Test extends TestCase
                     'substances' => [1, 2]
                 ],
                 [
-                    'current_page' => 1,
-                    'total'        => 0,
-                    'per_page'     => 5,
+                    'meta' => [
+                        'current_page' => 1,
+                        'total'        => 0,
+                        'per_page'     => 5,
+                    ],
                     'data'         => []
                 ]
             ],
+
             [
                 function () {
                     Substance::find(1)->update([
@@ -64,9 +69,11 @@ class Drug3Test extends TestCase
                     'substances' => [1, 2, 3, 4]
                 ],
                 [
-                    'current_page' => 1,
-                    'total'        => 6,
-                    'per_page'     => 5,
+                    'meta' => [
+                        'current_page' => 1,
+                        'total'        => 6,
+                        'per_page'     => 5,
+                    ],
                     'data'         => [
                         [
                             'id'               => 23,
@@ -92,30 +99,30 @@ class Drug3Test extends TestCase
                                 ['id' => 6]
                             ]
                         ],
-                        [
-                            'id'               => 29,
-                            'substances_count' => 5,
-                            'isset_substances' => 3,
-                            'substances'       => [
-                                ['id' => 2],
-                                ['id' => 3],
-                                ['id' => 4],
-                                ['id' => 5],
-                                ['id' => 6]
-                            ]
-                        ],
-                        [
-                            'id'               => 30,
-                            'substances_count' => 5,
-                            'isset_substances' => 3,
-                            'substances'       => [
-                                ['id' => 2],
-                                ['id' => 3],
-                                ['id' => 4],
-                                ['id' => 5],
-                                ['id' => 6]
-                            ]
-                        ],
+                        // [
+                        //     'id'               => 29,
+                        //     'substances_count' => 5,
+                        //     'isset_substances' => 3,
+                        //     'substances'       => [
+                        //         ['id' => 2],
+                        //         ['id' => 3],
+                        //         ['id' => 4],
+                        //         ['id' => 5],
+                        //         ['id' => 6]
+                        //     ]
+                        // ],
+                        // [
+                        //     'id'               => 30,
+                        //     'substances_count' => 5,
+                        //     'isset_substances' => 3,
+                        //     'substances'       => [
+                        //         ['id' => 2],
+                        //         ['id' => 3],
+                        //         ['id' => 4],
+                        //         ['id' => 5],
+                        //         ['id' => 6]
+                        //     ]
+                        // ],
                         [
                             'id'               => 25,
                             'substances_count' => 5,
@@ -131,6 +138,7 @@ class Drug3Test extends TestCase
                     ]
                 ]
             ],
+
             [
                 function () {
                     Substance::find(1)->update([
@@ -142,22 +150,24 @@ class Drug3Test extends TestCase
                     'substances' => [1, 2, 3, 4]
                 ],
                 [
-                    'current_page' => 2,
-                    'total'        => 6,
-                    'per_page'     => 5,
+                    'meta' => [
+                        'current_page' => 2,
+                        'total'        => 6,
+                        'per_page'     => 5,
+                    ],
                     'data'         => [
-                        [
-                            'id'               => 26,
-                            'substances_count' => 5,
-                            'isset_substances' => 2,
-                            'substances'       => [
-                                ['id' => 3],
-                                ['id' => 4],
-                                ['id' => 5],
-                                ['id' => 6],
-                                ['id' => 7]
-                            ]
-                        ]
+                        // [
+                        //     'id'               => 26,
+                        //     'substances_count' => 5,
+                        //     'isset_substances' => 2,
+                        //     'substances'       => [
+                        //         ['id' => 3],
+                        //         ['id' => 4],
+                        //         ['id' => 5],
+                        //         ['id' => 6],
+                        //         ['id' => 7]
+                        //     ]
+                        // ]
                     ]
                 ]
             ],

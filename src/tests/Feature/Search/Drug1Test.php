@@ -43,9 +43,11 @@ class Drug1Test extends TestCase
                     'substances' => [1, 2]
                 ],
                 [
-                    'current_page' => 1,
-                    'total'        => 10,
-                    'per_page'     => 5,
+                    'meta' => [
+                        'current_page' => 1,
+                        'total'        => 10,
+                        'per_page'     => 5,
+                    ],
                     'data'         => [
                         [
                             'id'               => 1,
@@ -90,18 +92,20 @@ class Drug1Test extends TestCase
                     ]
                 ]
             ],
+            
             [
                 function () {
-
                 },
                 [
                     'page'       => 2,
                     'substances' => [1, 2]
                 ],
                 [
-                    'current_page' => 2,
-                    'total'        => 10,
-                    'per_page'     => 5,
+                    'meta' => [
+                        'current_page' => 2,
+                        'total'        => 10,
+                        'per_page'     => 5,
+                    ],
                     'data'         => [
                         [
                             'id'               => 6,
@@ -146,6 +150,7 @@ class Drug1Test extends TestCase
                     ]
                 ]
             ],
+
             [
                 function () {
                     Drug::destroy(1);
@@ -155,9 +160,11 @@ class Drug1Test extends TestCase
                     'substances' => [1, 2]
                 ],
                 [
-                    'current_page' => 2,
-                    'total'        => 9,
-                    'per_page'     => 5,
+                    'meta' => [
+                        'current_page' => 2,
+                        'total'        => 9,
+                        'per_page'     => 5,
+                    ],
                     'data'         => [
                         [
                             'id'               => 7,

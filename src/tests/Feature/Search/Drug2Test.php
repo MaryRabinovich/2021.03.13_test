@@ -43,9 +43,11 @@ class Drug2Test extends TestCase
                     'substances' => [1, 2, 3]
                 ],
                 [
-                    'current_page' => 1,
-                    'total'        => 10,
-                    'per_page'     => 5,
+                    'meta' => [
+                        'current_page' => 1,
+                        'total'        => 10,
+                        'per_page'     => 5,
+                    ],
                     'data'         => [
                         [
                             'id'               => 11,
@@ -104,9 +106,11 @@ class Drug2Test extends TestCase
                     'substances' => [1, 2, 3]
                 ],
                 [
-                    'current_page' => 1,
-                    'total'        => 8,
-                    'per_page'     => 5,
+                    'meta' => [
+                        'current_page' => 1,
+                        'total'        => 8,
+                        'per_page'     => 5,
+                    ],
                     'data'         => [
                         [
                             'id'               => 12,

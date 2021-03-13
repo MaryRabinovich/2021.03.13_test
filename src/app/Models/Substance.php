@@ -13,4 +13,12 @@ class Substance extends Model
       'name',
       'visible',
     ];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function drugs()
+    {
+      return $this->belongsToMany(Drug::class);
+    }
 }
